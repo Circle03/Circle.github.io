@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://circle03.github.io/assets/css3_img/sjx.png">
 <meta property="og:image" content="https://circle03.github.io/assets/css3_img/sjx%E6%95%88%E6%9E%9C%E5%9B%BE.png">
 <meta property="article:published_time" content="2022-03-23T09:13:00.000Z">
-<meta property="article:modified_time" content="2022-03-22T04:07:08.463Z">
+<meta property="article:modified_time" content="2022-03-22T12:17:36.559Z">
 <meta property="article:author" content="Circle">
 <meta property="article:tag" content="前端入门，自学前端">
 <meta name="twitter:card" content="summary">
@@ -195,15 +195,15 @@ var _hmt = _hmt || [];
 <li>html5,css3,javascirpt,这是基础三大件，(我大概花了3个月学习)<br>  再然后学习ES新语法，再学基础服务器node.js,选一门框架(vue,react)，大概就是这几个过程<br>  学得差不多了，就可去网上找一些项目，巩固一下基础，认识一下所学的知识</li>
 </ul>
 </li>
-<li>编译工具<br>  推荐使用vsCode,个人用的这个(虽然也没用过其他的)<br>推荐vscode使用的插件:<ul>
-<li>Live Server 保存自动刷新页面，不再需要手动</li>
+<li>编译工具<br>  推荐使用vsCode,个人用的这个(虽然也没用过其他的)<br>  推荐使用的插件:<ul>
+<li>Live Server 保存时自动刷新页面，不再需要手动</li>
 <li>Chinese 翻译</li>
-<li>nest 好看的网页粒子</li>
+<li>nest 好看的网页粒子<span id="more"></span>
+<h2 id="HTML-5"><a href="#HTML-5" class="headerlink" title="HTML 5"></a>HTML 5</h2></li>
 </ul>
 </li>
 </ul>
-<hr>
-<h2 id="HTML-5"><a href="#HTML-5" class="headerlink" title="HTML 5"></a>HTML 5</h2><p><strong>整体</strong></p>
+<p><strong>整体</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt; //告诉浏览器编写页面所用的标记的版本</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charaset=&quot;UTF-8&quot;&gt; //UTF-8 万国码</span><br><span class="line">        &lt;title&gt;Doncument&lt;/title&gt; //网页的标题</span><br><span class="line">        &lt;style&gt;</span><br><span class="line"></span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">        &lt;scirpt&gt;</span><br><span class="line"></span><br><span class="line">        &lt;/scirpt&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
 <ul>
@@ -618,7 +618,7 @@ var _hmt = _hmt || [];
 <ul>
 <li><strong>枚举对象中的属性</strong><br>使用for…in 语句<br>  语法：  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(var 变量in 对象)&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <strong>示例⬇️</strong> :  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">    name:&quot;帅哥&quot;,</span><br><span class="line">    age:28,</span><br><span class="line">    gender:&quot;男&quot;，</span><br><span class="line">    text:&#123;</span><br><span class="line">        name:&quot;大帅哥&quot;&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">for(var n in obj)&#123;</span><br><span class="line">    console.log(obj[n]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<strong>示例解析➡️</strong> ：var一个变量为n,将obj的对象遍历到n中，最后再打印obj[n]，会得到obj里的全部内容</li>
+<strong>示例解析➡️</strong> ：声明一个变量为n,将obj的对象遍历到n中，最后再打印obj[n]，会得到obj里的全部内容</li>
 </ul>
 <hr>
 <ul>
@@ -1020,6 +1020,22 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <hr>
+<h2 id="ES6-11"><a href="#ES6-11" class="headerlink" title="ES6 - 11"></a>ES6 - 11</h2><p>为了弥补ES5的不足</p>
+<ul>
+<li><strong>symbol</strong><br>用来定义对象的<strong>唯一</strong>属性名<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let sy = Symbol(&quot;KK&quot;);</span><br><span class="line">    console.log(sy);   // Symbol(KK)</span><br><span class="line">    typeof(sy);        // &quot;symbol&quot;</span><br><span class="line">    </span><br><span class="line">    // 相同参数 Symbol() 返回的值不相等</span><br><span class="line">    let sy1 = Symbol(&quot;kk&quot;); </span><br><span class="line">    sy === sy1;       // false</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<ul>
+<li><p><strong>迭代器（iterator）</strong><br>只要对象有Symbol.iterator这个属性就是可迭代的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    const a = &#123;</span><br><span class="line">        name:&#x27;abcd&#x27;,</span><br><span class="line">        stus:[</span><br><span class="line">            &#x27;zxc&#x27;,</span><br><span class="line">            &#x27;vcx&#x27;,</span><br><span class="line">            &#x27;fds&#x27;</span><br><span class="line">        ],</span><br><span class="line">        [Symbol.iterator]()&#123;</span><br><span class="line">            let index = 0;</span><br><span class="line">            let _this = this;</span><br><span class="line">            return &#123;</span><br><span class="line">                next:function() &#123;</span><br><span class="line">                    if(index &lt; this.stus.length)&#123;</span><br><span class="line">                        const result = &#123;value:this.stus[index],done:false&#125;</span><br><span class="line">                        index++;</span><br><span class="line">                        return result;</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        return &#123;value:undefined,done:true&#125;;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //for...of </span><br><span class="line">    * 适用遍历数/数组对象/字符串/map/set等拥有迭代器对象的集合.但是不能遍历对象,因为没有迭代器对象.与forEach()不同的是，它可以正确响应break、continue和return语句</span><br><span class="line">    for(let v of a) &#123;</span><br><span class="line">        console.log(v)</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>生成器（generator）</strong></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">    生成器其实就是一个特殊的函数</span><br><span class="line">    异步编程 纯回调函数</span><br><span class="line">    函数代码的分隔符</span><br><span class="line">    function * gen() &#123;</span><br><span class="line">        console.log(111)</span><br><span class="line">        yield &#x27;f&#x27;;</span><br><span class="line">        console.log(222)</span><br><span class="line">        yield &#x27;c&#x27;;</span><br><span class="line">        console.log(333)</span><br><span class="line">        yield &#x27;c&#x27;;</span><br><span class="line">        console.log(444)</span><br><span class="line">    &#125;</span><br><span class="line">    let iterator =gen();</span><br><span class="line">    iterator.next()</span><br><span class="line">    iterator.next()</span><br><span class="line">    iterator.next()</span><br><span class="line">    iterator.next()</span><br><span class="line">    生成器函数实例</span><br><span class="line">    1s 111 ,2s 222 ,3s 333</span><br><span class="line">    function one()&#123;</span><br><span class="line">        setTimeout(() =&gt; &#123;</span><br><span class="line">            console.log(111)</span><br><span class="line">            iterator.next()</span><br><span class="line">        &#125;,1000)</span><br><span class="line">    &#125;</span><br><span class="line">    function two()&#123;</span><br><span class="line">        setTimeout(() =&gt; &#123;</span><br><span class="line">            console.log(222)</span><br><span class="line">            iterator.next()</span><br><span class="line">        &#125;,2000)</span><br><span class="line">    &#125;</span><br><span class="line">    function three()&#123;</span><br><span class="line">        setTimeout(() =&gt; &#123;</span><br><span class="line">            console.log(333)</span><br><span class="line">            iterator.next()</span><br><span class="line">        &#125;,3000)</span><br><span class="line">    &#125;</span><br><span class="line">    function *gen() &#123;</span><br><span class="line">        yield one();</span><br><span class="line">        yield two();</span><br><span class="line">        yield three();</span><br><span class="line">    &#125;    </span><br><span class="line">    调用生成器函数</span><br><span class="line">    let iterator = gen()</span><br><span class="line">    iterator.next();</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">**模拟获取**用户数据;订单数据;商品数据</span><br><span class="line">    function getUsers()&#123;</span><br><span class="line">        setTimeout(()=&gt;&#123;</span><br><span class="line">            let data = &#x27;用户数据&#x27;;</span><br><span class="line">            iterator.next(data);</span><br><span class="line">        &#125;,1000)</span><br><span class="line">    &#125;</span><br><span class="line">    function getOrders()&#123;</span><br><span class="line">        setTimeout(()=&gt;&#123;</span><br><span class="line">            let data = &#x27;订单数据&#x27;;</span><br><span class="line">            iterator.next(data);</span><br><span class="line">        &#125;,1000)</span><br><span class="line">    &#125;</span><br><span class="line">    function getGoods()&#123;</span><br><span class="line">        setTimeout(()=&gt;&#123;</span><br><span class="line">            let data = &#x27;商品数据&#x27;;</span><br><span class="line">            iterator.next(data);</span><br><span class="line">        &#125;,1000)</span><br><span class="line">    &#125;</span><br><span class="line">    function *gen() &#123;</span><br><span class="line">        let user = yield getUsers();</span><br><span class="line">        console.log(user)</span><br><span class="line">        let orders = yield getOrders();</span><br><span class="line">        console.log(orders)</span><br><span class="line">        let goods = yield getGoods();</span><br><span class="line">        console.log(goods)</span><br><span class="line">    &#125;</span><br><span class="line">    调用生成器函数</span><br><span class="line">    let iterator = gen()</span><br><span class="line">    iterator.next();</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<ul>
+<li><strong>Promise</strong></li>
+</ul>
 
       
 
@@ -1079,8 +1095,8 @@ var _hmt = _hmt || [];
 <nav id="article-nav">
   
   
-    <a href="/2022/03/19/%E9%9F%B3%E4%B9%90/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">编曲作曲</div>
+    <a href="/2022/03/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端面试题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -1203,6 +1219,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">前端入门，自学前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">赶紧给爷看！</a>
               </li>
             
             <div class="clearfix"></div>
