@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://circle03.github.io/assets/css3_img/sjx.png">
 <meta property="og:image" content="https://circle03.github.io/assets/css3_img/sjx%E6%95%88%E6%9E%9C%E5%9B%BE.png">
 <meta property="article:published_time" content="2022-03-23T09:13:00.000Z">
-<meta property="article:modified_time" content="2022-03-22T12:17:36.559Z">
+<meta property="article:modified_time" content="2022-03-23T12:38:23.996Z">
 <meta property="article:author" content="Circle">
 <meta property="article:tag" content="前端入门，自学前端">
 <meta name="twitter:card" content="summary">
@@ -198,12 +198,15 @@ var _hmt = _hmt || [];
 <li>编译工具<br>  推荐使用vsCode,个人用的这个(虽然也没用过其他的)<br>  推荐使用的插件:<ul>
 <li>Live Server 保存时自动刷新页面，不再需要手动</li>
 <li>Chinese 翻译</li>
-<li>nest 好看的网页粒子<span id="more"></span>
-<h2 id="HTML-5"><a href="#HTML-5" class="headerlink" title="HTML 5"></a>HTML 5</h2></li>
+<li>nest 好看的网页粒子</li>
 </ul>
 </li>
 </ul>
-<p><strong>整体</strong></p>
+<hr>
+<span id="more"></span>
+
+<p>(ctrl + f 可搜索网页内容)</p>
+<h2 id="HTML-5"><a href="#HTML-5" class="headerlink" title="HTML 5"></a>HTML 5</h2><p><strong>整体</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt; //告诉浏览器编写页面所用的标记的版本</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charaset=&quot;UTF-8&quot;&gt; //UTF-8 万国码</span><br><span class="line">        &lt;title&gt;Doncument&lt;/title&gt; //网页的标题</span><br><span class="line">        &lt;style&gt;</span><br><span class="line"></span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">        &lt;scirpt&gt;</span><br><span class="line"></span><br><span class="line">        &lt;/scirpt&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
 <ul>
@@ -1034,7 +1037,128 @@ var _hmt = _hmt || [];
 </ul>
 <hr>
 <ul>
-<li><strong>Promise</strong></li>
+<li><p><strong>Promise</strong><br>一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。</p>
+<ul>
+<li>实例化Promise 对象  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const p = new Promise(function(resolve,reject) &#123;</span><br><span class="line">    setTimeout(function() &#123;</span><br><span class="line">        // let data = &#x27;数据库中的用户数据&#x27;;</span><br><span class="line">        // resolve(data);</span><br><span class="line">        let err = &#x27;数据读取失败&#x27;;</span><br><span class="line">        console.log(err)</span><br><span class="line">    &#125;,1000)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+  (Promise构造函数接受一个函数作为参数，该函数的两个参数分别是resolve和reject。它们是两个函数，由 JavaScript 引擎提供，不用自己部署。)</li>
+<li>Promise实例生成以后，可以用then方法分别指定resolved状态和rejected状态的回调函数。  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p.then(function(valuse)&#123;</span><br><span class="line">    // success</span><br><span class="line">&#125;, function(error)&#123;</span><br><span class="line">    // failure</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>异步加载图片的例子(出处<a target="_blank" rel="noopener" href="https://www.cnblogs.com/samve/p/10703953.html">https://www.cnblogs.com/samve/p/10703953.html</a>)  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function loadImageAsync(url) &#123;</span><br><span class="line">return new Promise(function(resolve, reject) &#123;</span><br><span class="line">    const image = new Image();</span><br><span class="line">    image.onload = function() &#123;</span><br><span class="line">    resolve(image);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    image.onerror = function() &#123;</span><br><span class="line">    reject(new Error(&#x27;Could not load image at &#x27; + url));</span><br><span class="line">    &#125;;</span><br><span class="line">    image.src = url;</span><br><span class="line">&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+加载成功，调用resolve方法，否则调用reject方法。</li>
+</ul>
+</li>
+<li><p><strong>Promise封装AJAX</strong></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">1.创建对象</span><br><span class="line">const p  = new Promise((resolve,reject) =&gt; &#123;</span><br><span class="line">    const xhr = new XMLHttpRequest();</span><br><span class="line">    // 2初始化</span><br><span class="line">    xhr.open(&#x27;GET&#x27;,&#x27;https://api.apiopen.top/getJoke&#x27;);</span><br><span class="line">    // 3发送</span><br><span class="line">    xhr.send();</span><br><span class="line">    // 4.绑定事件，处理函数</span><br><span class="line">    xhr.onreadystatechange = function() &#123;</span><br><span class="line">        if(xhr.readyState === 4 )&#123;</span><br><span class="line">            if(xhr.status &gt;= 200 &amp;&amp; xhr.status &lt;300)&#123;</span><br><span class="line">                // 表示成功</span><br><span class="line">                resolve(xhr.response);</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                reject(xhr.status)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">// 指定回调</span><br><span class="line">p.then(function(value) &#123;</span><br><span class="line">    console.log(value)</span><br><span class="line">&#125;, function(reason) &#123;</span><br><span class="line">    console.error(reason)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>Promise的then方法</strong><br>  调用then方法，then方法的返回结果是promise对象，对象状态由回调函数的执行结果决定  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">如果回调函数中返回的结果是 非promise 类型的属性，状态为成功，返回值为对象的成功的值</span><br><span class="line">const result = p.then(value =&gt; &#123;</span><br><span class="line">    console.log(value)</span><br><span class="line">    1.非promise类型属性</span><br><span class="line">    return &#x27;fds&#x27;</span><br><span class="line">    3.抛出错误</span><br><span class="line">    throw new Error(&#x27;出错了&#x27;)</span><br><span class="line">&#125;, reason =&gt; &#123;</span><br><span class="line">    console.warn(reason)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>Promiser的Set</strong><ul>
+<li>数组去重  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1,2,3,4,2,1]</span><br><span class="line">let result = [...new Set(arr)]</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<ul>
+<li><p>交集</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let arr2 = [4,5,6,5,6]</span><br><span class="line">let result = [...new Set(arr)].filter(item =&gt;new Set(arr2).has(item))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>并集,合并且把相同的去掉一个，从小到大排列</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let union = [new Set([...arr, ...arr2])];</span><br><span class="line">console.log(union)</span><br></pre></td></tr></table></figure></li>
+<li><p>差集</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let diff = [...new Set(arr)].filter(item =&gt; !(new Set(arr2).has(item)));</span><br><span class="line">console.log(diff)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><strong>Map</strong><ul>
+<li>set&amp;size  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">let m = new Map();</span><br><span class="line">m.set(&#x27;name&#x27;,&#x27;fd&#x27;)</span><br><span class="line">m.set(&#x27;change&#x27;,function() &#123;</span><br><span class="line">    console.log(&#x27;改变&#x27;)</span><br><span class="line">&#125;)</span><br><span class="line">let key = &#123;</span><br><span class="line">    sc : &#x27;fd&#x27;</span><br><span class="line">&#125;</span><br><span class="line">m.set(key,[&#x27;bj&#x27;,&#x27;df&#x27;,&#x27;fv&#x27;])</span><br><span class="line">size //返回当前set容器中的元素个数</span><br><span class="line">console.log(m.size)</span><br><span class="line">- delete    // 删除</span><br><span class="line">m.delete(&#x27;name&#x27;)</span><br><span class="line">- get   // 获取</span><br><span class="line">console.log(m.get(&#x27;change&#x27;));</span><br><span class="line">console.log(m.get(key))</span><br><span class="line">- clear // 清空</span><br><span class="line">m.clear()</span><br><span class="line">- for...of  // 遍历</span><br><span class="line">for(let v of m)&#123;</span><br><span class="line">    console.log(v)</span><br><span class="line">&#125;</span><br><span class="line">console.log(m)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>class</strong>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class p&#123;</span><br><span class="line">    // 构造方法</span><br><span class="line">    constructor(brand,price)&#123;</span><br><span class="line">        this.brand = brand;</span><br><span class="line">        this.price = price;</span><br><span class="line">    &#125;</span><br><span class="line">    // 方法必须使用该语法</span><br><span class="line">    call()&#123;</span><br><span class="line">        console.log(&#x27;打电话&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let Mi = new p(&#x27;小米&#x27;,1999)</span><br><span class="line">console.log(Mi)</span><br><span class="line">Mi.call(); </span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<ul>
+<li><strong>module</strong><ul>
+<li>通过import * as引入文件（通用方式）<br>  import * as m1 from ‘.&#x2F;xxx&#x2F;xxx.js’</li>
+<li>解构赋值<br>  import {school,teach} from ‘.&#x2F;xxx&#x2F;xxx.js’<br>  import {school as feilong,heihei} from ‘.&#x2F;xxx&#x2F;xxx.js’<br>  console.log(feilong,heihei)</li>
+<li>简便形式 针对默认暴露<br>  import m3 from ‘.&#x2F;xxx&#x2F;xxx.js’;<br>  console.log(m3);</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>let&amp;const</strong><ul>
+<li><p>let声明的变量可以改变，值和类型都可以改变</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let st = &quot;fdfd&quot;;</span><br><span class="line">let st = &#x27;fdfdg&#x27;;</span><br></pre></td></tr></table></figure></li>
+<li><p>块级作用域 全局,函数,eval</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    let st = &quot;fd&quot;</span><br><span class="line">&#125;</span><br><span class="line">console.log(st)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不存在变量提升</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(st)</span><br><span class="line">let st = &#x27;fd&#x27;</span><br></pre></td></tr></table></figure></li>
+<li><p>不影响作用域链</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    let st = &#x27;fd&#x27;</span><br><span class="line">    function fn() &#123;</span><br><span class="line">        console.log(st)</span><br><span class="line">    &#125;</span><br><span class="line">    fn();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>const声明的常量不可以改变，这意味着，const一旦声明，就必须立即初始化，不能以后再赋值<ul>
+<li>变量名不能重复  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const st = &#x27;fd&#x27;</span><br></pre></td></tr></table></figure></li>
+<li>一定要赋初始值</li>
+<li>一般常量使用大写</li>
+<li>常量的值不能修改</li>
+<li>块级作用域:  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    const PLAYER =&#x27;fd&#x27;</span><br><span class="line">&#125;</span><br><span class="line">console.log(PLAYER)</span><br></pre></td></tr></table></figure></li>
+<li>对于数组和对象的元素修改，不算做对常量的修改，不会报错  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const TEAM = [&#x27;fd&#x27;,&#x27;df&#x27;,&#x27;fds&#x27;,&#x27;fds&#x27;]</span><br><span class="line">TEAM.push(&#x27;fdsaf&#x27;)</span><br><span class="line">console.log(TEAM)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>新声明字符串</strong><br>ES6引入新的声明字符串 &#96;&#96; ‘’ “”<ul>
+<li>声明  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let str = `大帅哥`</span><br><span class="line">console.log(str, typeof Str)</span><br></pre></td></tr></table></figure></li>
+<li>内容中可以直接出现换行符  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let st1r =</span><br><span class="line">    `&lt;ul&gt;</span><br><span class="line">        &lt;li&gt;吃&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;吃&lt;/li&gt; </span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">`</span><br></pre></td></tr></table></figure></li>
+<li>变量拼接  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let ld = &#x27;fdc&#x27;;</span><br><span class="line">let ot = `$&#123;ld&#125;是谁？`;</span><br><span class="line">console.log(ot)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>箭头函数</strong><br>ES6允许使用箭头 (&#x3D;&gt;)定义函数<ul>
+<li>非箭头函数  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let fn = function()&#123;</span><br><span class="line">    return a+b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>箭头函数  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let fn = ()=&gt;&#123;</span><br><span class="line">    return a+b;</span><br><span class="line">&#125;</span><br><span class="line">let result = fn(1,2)</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure></li>
+<li>箭头函数改变this指向，this 是静态的  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function getName() &#123;</span><br><span class="line">    console.log(this.name)</span><br><span class="line">&#125;</span><br><span class="line">let getName2 = ()=&gt; &#123;</span><br><span class="line">    console.log(this.name)</span><br><span class="line">&#125;</span><br><span class="line">window.name = &#x27;vcxz&#x27;;</span><br><span class="line">const cv = &#123;</span><br><span class="line">    name:&#x27;fdsfdas&#x27;</span><br><span class="line">&#125;</span><br><span class="line">// getName()</span><br><span class="line">// getName2()</span><br><span class="line">// call 方法</span><br><span class="line">getName.call(cv)</span><br><span class="line">getName2.call(cv)</span><br></pre></td></tr></table></figure></li>
+<li>不能作为构造实例化对象  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var Person = function(name, age)&#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line">let Person = (name, age) =&gt; &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line">let me = new Person(&#x27;f&#x27;,10)</span><br><span class="line">console.log(me)</span><br></pre></td></tr></table></figure></li>
+<li>不能使用arguments变量  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var fn = function() &#123;</span><br><span class="line">    console.log(arguments)</span><br><span class="line">&#125;</span><br><span class="line">let fn = () =&gt; &#123;</span><br><span class="line">    console.log(arguments)</span><br><span class="line">&#125;</span><br><span class="line">fn(1,2,3)</span><br></pre></td></tr></table></figure></li>
+<li>箭头函数简写  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当形参有且只有一个的时候,可以省略小括号</span><br><span class="line">let add = n =&gt; &#123;</span><br><span class="line">    return n+n</span><br><span class="line">&#125;</span><br><span class="line">console.log(add(9))</span><br><span class="line">当代码只有一条语句的时候, 省略花括号，return也必须省略</span><br><span class="line">let pow = (n) =&gt; n * n;</span><br><span class="line">console.log(pow(9))</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>…</strong><ul>
+<li>(…)扩展运算符  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const fc = [&#x27;c&#x27;,&#x27;v&#x27;,&#x27;b&#x27;];</span><br><span class="line">function sc()&#123;</span><br><span class="line">    console.log(arguments)</span><br><span class="line">&#125;</span><br><span class="line">sc(...fc);</span><br></pre></td></tr></table></figure></li>
+<li>数组合并  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const axc =[&#x27;mn&#x27;,&#x27;kj&#x27;]</span><br><span class="line">const bxc = [&#x27;asd&#x27;,&#x27;fds&#x27;]</span><br><span class="line">const nxc = [...axc,...bxc]</span><br><span class="line">console.log(nxc)</span><br></pre></td></tr></table></figure></li>
+<li>数组的克隆  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const x = [&#x27;v&#x27;,&#x27;c&#x27;,&#x27;a&#x27;];</span><br><span class="line">const z =[...x];</span><br><span class="line">console.log(z)</span><br></pre></td></tr></table></figure></li>
+<li>将伪数组转为真正的数组  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const divs = document.querySelectorAll(&#x27;div&#x27;)</span><br><span class="line">const divArr = [...divs];</span><br><span class="line">console.log(divArr)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>正则扩展</strong><ul>
+<li>命名捕获分组  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let str = &quot;&lt;a href=&#x27;https://circle03.github.io&#x27;&gt;circle的博客&lt;/a&gt;&quot;</span><br><span class="line">const reg = /&lt;a href=&#x27;(?&lt;url&gt;.*)&#x27;&gt;(?&lt;text&gt;.*)&lt;\/a&gt;/;</span><br><span class="line">const result = reg.exec(str);</span><br><span class="line">console.log(result.groups.url)</span><br><span class="line">console.log(result.groups.text)</span><br></pre></td></tr></table></figure></li>
+<li>断言<br>  正向断言  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let str = &#x27;js5211314你知道么555啦啦啦&#x27;</span><br><span class="line">const reg = /\d+(?=啦)/;</span><br><span class="line">const result = reg.exec(str);</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure>
+  反向断言  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let str = &#x27;js5211314你知道么555啦啦啦&#x27;</span><br><span class="line">const reg = /(?&lt;=么)\d+/;</span><br><span class="line">const result = reg.exec(str);</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><strong>二维数组</strong><ul>
+<li>fromEntries  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const result = Object.fromEntries([</span><br><span class="line">    [&#x27;name&#x27;,&#x27;孙悟空&#x27;],</span><br><span class="line">    [&#x27;mingzi&#x27;,&#x27;红楼梦,西游记,水浒传，三国演义&#x27;]</span><br><span class="line">])</span><br></pre></td></tr></table></figure></li>
+<li>Map  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const m = new Map();</span><br><span class="line">m.set(&#x27;name&#x27;,&#x27;ABCD&#x27;)</span><br><span class="line">const result = Object.fromEntries(m)</span><br><span class="line"></span><br><span class="line">const result = Object.entries(&#123;</span><br><span class="line">    name:&#x27;abcd&#x27;</span><br><span class="line">&#125;)</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure></li>
+<li>trimStart清除左侧空白  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let str = &#x27;  fdsa  &#x27;</span><br><span class="line">console.log(str.trimStart());</span><br></pre></td></tr></table></figure></li>
+<li>trimEnd清除右侧空白  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let str = &#x27;  fdsa  &#x27;</span><br><span class="line">console.log(str.trimEnd());</span><br></pre></td></tr></table></figure></li>
+<li>flat 将多维数组转化为低位数组  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1,2,3,[4,5,[6,7,8]]];</span><br><span class="line">// 参数为深度 是一个数字</span><br><span class="line">console.log(arr.flat(2))</span><br></pre></td></tr></table></figure></li>
+<li>flatMap  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1,2,3,4];</span><br><span class="line">const result = arr.map(item =&gt; [item*10]);</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
 </ul>
 
       
