@@ -276,7 +276,34 @@ var _hmt = _hmt || [];
 <li><p>查询员工表的employees_id,job_id,last_name,按 employees_id降序，salary升序</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select employee_id,job_id,last_name from employees order by department_id desc, salary asc;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>查询员工表的job_id中包含 a和e的，并且a在e的前面<br>select job_id from employees where job_id like ‘%a%e%’</p>
+<li><p>查询员工表的job_id中包含 a和e的，并且a在e的前面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select job_id from employees where job_id like &#x27;%a%e%&#x27;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>已知表 student,里面有id(学号),name,gradeId(年级编号),<br>已知表grade,里面有id(年级编号),name,<br>已知表result,里面有id,score,studentNo(学号),<br>要求查询姓名,年级名、成绩</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select S.name,G.name,R.score </span><br><span class="line">from student S, frade G,result R </span><br><span class="line">where S.id= R.studentNo</span><br><span class="line">and G.id = S.gradeId</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示当前日期，以及去前后空格，截取字符串的函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select now();</span><br><span class="line">select trim(字符 from &#x27;&#x27;);</span><br><span class="line">select substr(str,startIndex);</span><br><span class="line">select substr(str,startIndex, length);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="DML语言"><a href="#DML语言" class="headerlink" title="DML语言"></a>DML语言</h2><!--
+ 数据操作语言：
+ 插入：insert
+ 修改：update
+ 删除：delete
+ -->
+<ul>
+<li>插入语句<br>语法<br>  nsert  into 表名(列名, …) values(值，….)<br>例如：<ul>
+<li>插入的值的类型要与列的类型一致或兼容  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSERT  INTO hello(id, name, gender, borndate) VALUES(1，&#x27;帅哥&#x27;,&#x27;未知&#x27; ,&#x27;公元102&#x27;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>删除语句<br>语法:<ul>
+<li>单表的删除<br>  方法一：delete from  表名 where 筛选条件<br>  例子：删除出生日期以2结尾  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM hello WHERE borndate LIKE &#x27;%2&#x27;</span><br></pre></td></tr></table></figure>
+  方法二：truncate table 表名<br>  优点：</li>
+</ul>
+<p>  1.效率高<br>  2.假如要删除的表中有自增长列，删除后再插入数据，自增长列的值从1开始，而delete会从断点开始<br>  缺点：<br>  1.删除后不能回滚<br>  2.没有返回值</p>
+<ul>
+<li>多表的删除：<br>  例子：删除hello,以及fine的信息  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DELETE h,f</span><br><span class="line">FROM hello h</span><br><span class="line">INNER JOIN fine f ON h.&#x27;helloworld.id&#x27; = f.&#x27;id&#x27;</span><br><span class="line">WHERE f.&#x27;fineok&#x27; = &#x27;&#x27;</span><br></pre></td></tr></table></figure></li>
+</ul>
 </li>
 </ul>
 
