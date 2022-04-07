@@ -269,7 +269,55 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="测试题"><a href="#测试题" class="headerlink" title="测试题"></a>测试题</h2><ul>
+        <h2 id="DML语言"><a href="#DML语言" class="headerlink" title="DML语言"></a>DML语言</h2><!--
+ 数据操作语言：
+ 插入：insert
+ 修改：update
+ 删除：delete
+ -->
+<ul>
+<li><p>插入语句<br>语法:<br>  nsert  into 表名(列名, …) values(值，….)<br>例如：</p>
+<ul>
+<li>插入的值的类型要与列的类型一致或兼容  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSERT  INTO hello(id, name, gender, borndate) VALUES(1，&#x27;帅哥&#x27;,&#x27;未知&#x27; ,&#x27;公元102&#x27;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>修改语句<br>语法:- update….where修改表中其中数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">将id为4的用户密码，更新为 888888</span><br><span class="line">UPDATE users set password = &#x27;888888&#x27; WHERE id=4</span><br><span class="line">同时修改两个值</span><br><span class="line">UPDATE users set password = &#x27;admin123&#x27; , status=&#x27;1&#x27; WHERE id=4</span><br></pre></td></tr></table></figure></li>
+<li><p>删除语句<br>语法:</p>
+<ul>
+<li>单表的删除<br>  方法一：delete from  表名 where 筛选条件<br>  例子：删除出生日期以2结尾  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM hello WHERE borndate LIKE &#x27;%2&#x27;</span><br></pre></td></tr></table></figure>
+  方法二：truncate table 表名<br>  优点：</li>
+</ul>
+<p>  1.效率高<br>  2.假如要删除的表中有自增长列，删除后再插入数据，自增长列的值从1开始，而delete会从断点开始<br>  缺点：<br>  1.删除后不能回滚<br>  2.没有返回值</p>
+<ul>
+<li>多表的删除：<br>  例子：删除hello,以及fine的信息  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DELETE h,f</span><br><span class="line">FROM hello h</span><br><span class="line">INNER JOIN fine f ON h.&#x27;helloworld.id&#x27; = f.&#x27;id&#x27;</span><br><span class="line">WHERE f.&#x27;fineok&#x27; = &#x27;&#x27;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>通过 * 把 users 表中所有的数据查询出来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从users表中把password 和username 数据查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select username ,password from users</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>演示 where 子句的使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from users where status =1</span><br><span class="line">select * from users where id &gt;2</span><br><span class="line">select * from users where username !=&#x27;zs&#x27; </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 AND 来显示所有状态为0且id小于3的用户 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users where status=0 and id&lt;3</span><br></pre></td></tr></table></figure></li>
+<li><p>使用 OR 来显示所有状态为1或者username为zs的用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users where status=1 or username = &#x27;zs&#x27;</span><br></pre></td></tr></table></figure></li>
+<li><p>对users表中数据，按照 status字段升序排序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users order by status</span><br></pre></td></tr></table></figure></li>
+<li><p>对users表中数据，按照 id对结果降序排序 desc表示降序排序 asc表示升序排序（默认）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users order by id desc</span><br></pre></td></tr></table></figure></li>
+<li><p>对users表中数据，按照 status字段降序排序，再按照username 的字母进行升序排序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users order by status desc, username asc</span><br></pre></td></tr></table></figure></li>
+<li><p>使用count(*)来统计users 表中，状态为0 用户的总数量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(*) from users where status=0</span><br></pre></td></tr></table></figure></li>
+<li><p>使用AS关键字给列起别名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select count(*) as total from users where status=0</span><br><span class="line">select username as uname, password as upwd from users</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="测试题"><a href="#测试题" class="headerlink" title="测试题"></a>测试题</h2><ul>
 <li><p>显示员工的最大工资以及工资平均值</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select max(salary),avg(salary) from employees;</span><br></pre></td></tr></table></figure>
 </li>
@@ -284,27 +332,6 @@ var _hmt = _hmt || [];
 </li>
 <li><p>显示当前日期，以及去前后空格，截取字符串的函数</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select now();</span><br><span class="line">select trim(字符 from &#x27;&#x27;);</span><br><span class="line">select substr(str,startIndex);</span><br><span class="line">select substr(str,startIndex, length);</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="DML语言"><a href="#DML语言" class="headerlink" title="DML语言"></a>DML语言</h2><!--
- 数据操作语言：
- 插入：insert
- 修改：update
- 删除：delete
- -->
-<ul>
-<li>插入语句<br>语法<br>  nsert  into 表名(列名, …) values(值，….)<br>例如：<ul>
-<li>插入的值的类型要与列的类型一致或兼容  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSERT  INTO hello(id, name, gender, borndate) VALUES(1，&#x27;帅哥&#x27;,&#x27;未知&#x27; ,&#x27;公元102&#x27;)</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>删除语句<br>语法:<ul>
-<li>单表的删除<br>  方法一：delete from  表名 where 筛选条件<br>  例子：删除出生日期以2结尾  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM hello WHERE borndate LIKE &#x27;%2&#x27;</span><br></pre></td></tr></table></figure>
-  方法二：truncate table 表名<br>  优点：</li>
-</ul>
-<p>  1.效率高<br>  2.假如要删除的表中有自增长列，删除后再插入数据，自增长列的值从1开始，而delete会从断点开始<br>  缺点：<br>  1.删除后不能回滚<br>  2.没有返回值</p>
-<ul>
-<li>多表的删除：<br>  例子：删除hello,以及fine的信息  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DELETE h,f</span><br><span class="line">FROM hello h</span><br><span class="line">INNER JOIN fine f ON h.&#x27;helloworld.id&#x27; = f.&#x27;id&#x27;</span><br><span class="line">WHERE f.&#x27;fineok&#x27; = &#x27;&#x27;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
 </ul>
 
       
