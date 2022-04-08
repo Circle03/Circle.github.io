@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://circle03.github.io">
-  <title>Circle的博客</title>
+  <title>Archives: 2022/4 | Circle的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="此站为本人的学习笔记若能有帮助您那很开心">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Circle的博客">
-<meta property="og:url" content="https://circle03.github.io/index.html">
+<meta property="og:url" content="https://circle03.github.io/archives/2022/04/index.html">
 <meta property="og:site_name" content="Circle的博客">
 <meta property="og:description" content="此站为本人的学习笔记若能有帮助您那很开心">
 <meta property="og:locale" content="zh_CN">
@@ -153,569 +153,41 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>​—</p>
-<p>title:python</p>
-<h2 id="​—"><a href="#​—" class="headerlink" title="​—"></a>​—</h2><h2 id="下载安装使用"><a href="#下载安装使用" class="headerlink" title="下载安装使用"></a>下载安装使用</h2><p>下载地址：<a target="_blank" rel="noopener" href="https://www.python.org/">https://www.python.org/</a><br>安装完毕后开始键+R打开运行输入python使用</p>
-<p>输入exit()退出</p>
-<h2 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h2><p>文件以 ‘.py’ 为后缀</p>
-<p>打印print()</p>
-<p>注释#</p>
-<ul>
-<li>变量</li>
-</ul>
-<p>​            定义： 变量名 &#x3D; 数据</p>
-<p>​            先定义后使用，变量名用于储存数据</p>
-<p>​            a &#x3D; 10 &#x2F;&#x2F;a为变量名，10 为数据</p>
-<p>​            多个变量也可以这样表达a,b,c,d &#x3D; 20,12,15,46</p>
-<ul>
-<li><p>变量的命名规则</p>
-<ul>
-<li>变量必须以字符(a-z,A-Z) 或下划线(_)开头</li>
-<li>其他字符可以是字母，数字，或 _</li>
-<li>变量区分大小写</li>
-<li>Python关键字不能用作变量名</li>
-<li>变量的命名不能以数字开头</li>
-</ul>
-</li>
-<li><p>命名规范</p>
-<ul>
-<li>见名知意</li>
-<li>小驼峰命名法</li>
-<li>大驼峰命名法</li>
-<li>下划线命名法</li>
-</ul>
-</li>
-<li><p>Python基本数据类型</p>
-<p>print(type(x))可以查看数据类型</p>
-<ul>
-<li>数字(num)—-int(有符号整数),float(浮点型),complex(复数),bool(布尔值False,True)</li>
-<li>字符串(str) &#x3D;&gt; b&#x3D;’’</li>
-<li>字典(dict) &#x3D;&gt; b&#x3D;{}</li>
-<li>元组(Tuple) &#x3D;&gt; b&#x3D;()</li>
-<li>列表(list)    &#x3D;&gt; b&#x3D;[]</li>
-</ul>
-</li>
-<li><p>算术运算符</p>
-<p>加+</p>
-<p>减-</p>
-<p>乘*</p>
-<p>除&#x2F;</p>
-<p>余%</p>
-<p>指数** </p>
-<p><code>a=7,b=3; a ** b =343 左边的数是底数,右边是指数</code></p>
-<p>求除去整&#x2F;&#x2F;</p>
-</li>
-<li><p>比较运算符</p>
-<p>等于&#x3D;&#x3D;; 不等于!&#x3D;; 大于&gt;; 小于&lt;;大于或等于 &gt;&#x3D;;小于或等于 &lt;&#x3D;</p>
-</li>
-<li><p>逻辑运算符</p>
-<p>and;or;not</p>
-<ul>
-<li><p>and 条件相对严格</p>
-<p>a,b,c,d &#x3D; 12,25,11,9</p>
-<p>print(a+b&gt;c and c&lt;d) #输出false，因为and的两边为true才为true</p>
-</li>
-<li><p>or 条件有一个为 真结果就为真</p>
-<p>a,b,c,d &#x3D; 12,25,11,9</p>
-<p>print(a+b&gt;c or c&lt;d) #输出 为true</p>
-</li>
-<li><p>not 取反  真假切换</p>
-<p>a,b,c,d &#x3D; 12,25,11,9</p>
-<p>print(not c&lt;d) #输出 为true</p>
-</li>
-<li><p>优先级()-&gt;not-&gt;and-&gt;or</p>
-<p>print(2&gt;1 and 1&lt;2 or 2&gt;2 and 1&lt;2 or 1&#x3D;&#x3D;1 and 1&lt;2)</p>
-</li>
-</ul>
-</li>
-<li><p>赋值运算符 算术运算符的一个补充</p>
-</li>
-<li><p>&#x3D; 赋值运算符</p>
-</li>
-<li><p>+&#x3D; 加法赋值运算符</p>
-<p>a,b,c,d&#x3D;23,18,10,3</p>
-<p>a+&#x3D;c</p>
-<p>print(a+&#x3D;c)</p>
-</li>
-<li><p>-&#x3D; 减法赋值运算符</p>
-</li>
-<li><p>*&#x3D; 乘法赋值运算符</p>
-</li>
-<li><p>&#x2F;&#x3D; 除法赋值运算符</p>
-</li>
-<li><p>%&#x3D; 取模赋值运算符</p>
-</li>
-<li><p>**&#x3D; 幂赋值运算符</p>
-</li>
-<li><p>&#x2F;&#x2F;&#x3D; 取整赋值运算符</p>
-</li>
-</ul>
-<h2 id="输入与输出"><a href="#输入与输出" class="headerlink" title="输入与输出"></a>输入与输出</h2><ul>
-<li><p>输出 %占位符</p>
-<p>name&#x3D;’大帅哥’</p>
-<p>classPro &#x3D;”帅哥大学”</p>
-<p>age&#x3D;1080</p>
-<p>print(‘我的名字叫%s，来自%s 今年%d岁了’%(name,classPro,age))</p>
-</li>
-<li><p>常用的格式化符号%s(通过str()字符串转换格式化),%d(有符号十进制整数),%f(浮点实数)</p>
-</li>
-<li><p>格式输出的其他方式.format()</p>
-<p>print(‘我的名字叫{},来自{}今年{}岁了’.format(name,classPro,age))</p>
-</li>
-<li><p>input输入</p>
-<p>QQNm&#x3D;input(‘请输入QQ号:’)</p>
-<p>phone&#x3D;input(‘请输入手机号:’)</p>
-<p>name&#x3D;input(‘请输入姓名:’)</p>
-<p>print(‘QQ号:{}’.format(QQNm))</p>
-<p>print(‘手机号:{}’.format(phone))</p>
-<p>print(‘名字:{}’.format(name))</p>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
+    
       
       
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/04/08/python/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-前端" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+        <div class="archives">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/23/%E5%89%8D%E7%AB%AF/">前端</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/23/%E5%89%8D%E7%AB%AF/" class="archive-article-date">
-  	<time datetime="2022-03-23T09:13:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-23</time>
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/04/08/python/" class="archive-article-date">
+  	<time datetime="2022-04-08T07:24:00.160Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-08</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
-<li>前端是什么？ <ul>
-<li>简洁来讲就是网站的前台部分，也叫前端开发，运行在PC端，移动端等浏览器上展现给用户浏览的网页。<br> 这个博客就是一个前端，无后端技术</li>
-</ul>
-</li>
-<li>如何学习？<ul>
-<li>个人推荐<strong>尚硅谷</strong><br>  我自己是自学的，通过观看<strong>尚硅谷</strong>的视频自行琢磨<br>  以下的链接就是梦的开始，<br>  请开始你的梦 &#x3D;&gt;<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1XJ411X7Ud?spm_id_from=333.788.b_636f6d6d656e74.9">梦开始的地方</a></li>
-</ul>
-</li>
-<li>学习过程<ul>
-<li>html5,css3,javascirpt,这是基础三大件，(我大概花了3个月学习)<br>  再然后学习ES新语法，再学基础服务器node.js,选一门框架(vue,react)，大概就是这几个过程<br>  学得差不多了，就可去网上找一些项目，巩固一下基础，认识一下所学的知识</li>
-</ul>
-</li>
-<li>编译工具<br>  推荐使用vsCode,个人用的这个(虽然也没用过其他的)<br>  推荐使用的插件:<ul>
-<li>Live Server 保存时自动刷新页面，不再需要手动</li>
-<li>Chinese 翻译</li>
-<li>nest 好看的网页粒子</li>
-</ul>
-</li>
-</ul>
-<hr>
-        
-          <a class="article-more-a" href="/2022/03/23/%E5%89%8D%E7%AB%AF/#more">more >></a>
-        
-      
+        </div>
+    	 
+        <div class="article-info info-on-right">
+          
+          
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端入门，自学前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/23/%E5%89%8D%E7%AB%AF/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-MySql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/23/MySql/">MySql</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/23/MySql/" class="archive-article-date">
-  	<time datetime="2022-03-23T09:13:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="DML语言"><a href="#DML语言" class="headerlink" title="DML语言"></a>DML语言</h2><!--
- 数据操作语言：
- 插入：insert
- 修改：update
- 删除：delete
- -->
-<ul>
-<li><p>插入语句<br>语法:<br>  nsert  into 表名(列名, …) values(值，….)<br>例如：</p>
-<ul>
-<li>插入的值的类型要与列的类型一致或兼容  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSERT  INTO hello(id, name, gender, borndate) VALUES(1，&#x27;帅哥&#x27;,&#x27;未知&#x27; ,&#x27;公元102&#x27;)</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>修改语句<br>语法:- update….where修改表中其中数据</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">将id为4的用户密码，更新为 888888</span><br><span class="line">UPDATE users set password = &#x27;888888&#x27; WHERE id=4</span><br><span class="line">同时修改两个值</span><br><span class="line">UPDATE users set password = &#x27;admin123&#x27; , status=&#x27;1&#x27; WHERE id=4</span><br></pre></td></tr></table></figure></li>
-<li><p>删除语句<br>语法:</p>
-<ul>
-<li>单表的删除<br>  方法一：delete from  表名 where 筛选条件<br>  例子：删除出生日期以2结尾  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM hello WHERE borndate LIKE &#x27;%2&#x27;</span><br></pre></td></tr></table></figure>
-  方法二：truncate table 表名<br>  优点：</li>
-</ul>
-<p>  1.效率高<br>  2.假如要删除的表中有自增长列，删除后再插入数据，自增长列的值从1开始，而delete会从断点开始<br>  缺点：<br>  1.删除后不能回滚<br>  2.没有返回值</p>
-<ul>
-<li>多表的删除：<br>  例子：删除hello,以及fine的信息  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DELETE h,f</span><br><span class="line">FROM hello h</span><br><span class="line">INNER JOIN fine f ON h.&#x27;helloworld.id&#x27; = f.&#x27;id&#x27;</span><br><span class="line">WHERE f.&#x27;fineok&#x27; = &#x27;&#x27;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>通过 * 把 users 表中所有的数据查询出来</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>从users表中把password 和username 数据查询</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select username ,password from users</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>演示 where 子句的使用</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from users where status =1</span><br><span class="line">select * from users where id &gt;2</span><br><span class="line">select * from users where username !=&#x27;zs&#x27; </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用 AND 来显示所有状态为0且id小于3的用户 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users where status=0 and id&lt;3</span><br></pre></td></tr></table></figure></li>
-<li><p>使用 OR 来显示所有状态为1或者username为zs的用户</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users where status=1 or username = &#x27;zs&#x27;</span><br></pre></td></tr></table></figure></li>
-<li><p>对users表中数据，按照 status字段升序排序</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users order by status</span><br></pre></td></tr></table></figure></li>
-<li><p>对users表中数据，按照 id对结果降序排序 desc表示降序排序 asc表示升序排序（默认）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users order by id desc</span><br></pre></td></tr></table></figure></li>
-<li><p>对users表中数据，按照 status字段降序排序，再按照username 的字母进行升序排序</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users order by status desc, username asc</span><br></pre></td></tr></table></figure></li>
-<li><p>使用count(*)来统计users 表中，状态为0 用户的总数量</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(*) from users where status=0</span><br></pre></td></tr></table></figure></li>
-<li><p>使用AS关键字给列起别名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select count(*) as total from users where status=0</span><br><span class="line">select username as uname, password as upwd from users</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="测试题"><a href="#测试题" class="headerlink" title="测试题"></a>测试题</h2><ul>
-<li><p>显示员工的最大工资以及工资平均值</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select max(salary),avg(salary) from employees;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查询员工表的employees_id,job_id,last_name,按 employees_id降序，salary升序</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select employee_id,job_id,last_name from employees order by department_id desc, salary asc;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查询员工表的job_id中包含 a和e的，并且a在e的前面</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select job_id from employees where job_id like &#x27;%a%e%&#x27;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>已知表 student,里面有id(学号),name,gradeId(年级编号),<br>已知表grade,里面有id(年级编号),name,<br>已知表result,里面有id,score,studentNo(学号),<br>要求查询姓名,年级名、成绩</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select S.name,G.name,R.score </span><br><span class="line">from student S, frade G,result R </span><br><span class="line">where S.id= R.studentNo</span><br><span class="line">and G.id = S.gradeId</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>显示当前日期，以及去前后空格，截取字符串的函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select now();</span><br><span class="line">select trim(字符 from &#x27;&#x27;);</span><br><span class="line">select substr(str,startIndex);</span><br><span class="line">select substr(str,startIndex, length);</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/23/MySql/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-前端面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/">前端面试题</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2022-03-22T09:13:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="比较vue-amp-react"><a href="#比较vue-amp-react" class="headerlink" title="比较vue&amp;react:"></a>比较vue&amp;react:</h2><ul>
-<li><p>相同点:</p>
-<ul>
-<li>都有组件化开发和Virtual DOM</li>
-<li>都支持props进行父子组件间数据通信</li>
-<li>都支持数据驱动视图,不直接操作真实DOM,更新状态数据界面就自动更新</li>
-<li>都支持服务器端渲染</li>
-<li>都有支持native的方案,React的React Native,Vue的Weex</li>
-</ul>
-</li>
-<li><p>不同点:</p>
-<ul>
-<li>数据绑定:vue实现了数据的双向绑定,react数据是单向的</li>
-<li>组件写法不一样,React推荐的做法是JSX,也就是把HTML和CSS全部写进JavaScript,Vue推荐的做法是webpack+vue+loader的单文件组件格式,既html,css,js写在同一文件</li>
-<li>state对象在react引用中不可变的,需要使用setState方法更新状态;在vue中,state对象不是必须的,数据由data属性在vue对象中管理</li>
-<li>virtual DOM不一样,vue会跟踪每一个组件的以来关系,不需要重新渲染整个组件树,而对于React 而言,每当引用的状态被改变时,全部组件都会重新渲染,所以react中会需要shouldComponentUpdate这个生命周期函数方法来进行控制</li>
-<li>React严格上只针对MVC的view层,Vue则是MVVM模式</li>
-</ul>
-</li>
-</ul>
-<hr>
-        
-          <a class="article-more-a" href="/2022/03/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">赶紧给爷看！</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-音乐" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/19/%E9%9F%B3%E4%B9%90/">编曲作曲</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/19/%E9%9F%B3%E4%B9%90/" class="archive-article-date">
-  	<time datetime="2022-03-19T03:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="和声"><a href="#和声" class="headerlink" title="和声"></a>和声</h2><p>内容</p>
-<hr>
-<h2 id="乐理"><a href="#乐理" class="headerlink" title="乐理"></a>乐理</h2><p>内容</p>
-<hr>
-<h2 id="编曲"><a href="#编曲" class="headerlink" title="编曲"></a>编曲</h2><p>内容</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/19/%E9%9F%B3%E4%B9%90/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -737,9 +209,9 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
