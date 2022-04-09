@@ -153,16 +153,27 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/04/09/Python/">Python</a>
+    </h1>
+  
+
+        
+        <a href="/2022/04/09/Python/" class="archive-article-date">
+  	<time datetime="2022-04-09T03:13:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-09</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>​—</p>
-<p>title:python</p>
-<h2 id="​—"><a href="#​—" class="headerlink" title="​—"></a>​—</h2><h2 id="下载安装使用"><a href="#下载安装使用" class="headerlink" title="下载安装使用"></a>下载安装使用</h2><p>下载地址：<a target="_blank" rel="noopener" href="https://www.python.org/">https://www.python.org/</a><br>安装完毕后开始键+R打开运行输入python使用</p>
-<p>输入exit()退出</p>
+        <h2 id="下载安装使用"><a href="#下载安装使用" class="headerlink" title="下载安装使用"></a>下载安装使用</h2><p>下载地址：<a target="_blank" rel="noopener" href="https://www.python.org/">https://www.python.org</a><br>安装完毕后开始键+R打开运行输入python查看是否成功安装</p>
 <h2 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h2><p>文件以 ‘.py’ 为后缀</p>
 <p>打印print()</p>
 <p>注释#</p>
@@ -277,6 +288,89 @@ var _hmt = _hmt || [];
 <p>print(‘名字:{}’.format(name))</p>
 </li>
 </ul>
+<h2 id="流程控制结构"><a href="#流程控制结构" class="headerlink" title="流程控制结构"></a>流程控制结构</h2><ul>
+<li><p>选择流程</p>
+<ul>
+<li><p>if 条件表达式:比较运算符，逻辑运算符&#x2F; 符合的 条件表达式 </p>
+<p>特征：只要满足其中一个分支，就会退出本层if语句结构</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#单个条件：</span></span><br><span class="line">score = <span class="number">60</span></span><br><span class="line"><span class="keyword">if</span> score &lt;= <span class="number">59</span>: </span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;其中一个条件成立即可输出&#x27;</span>)</span><br><span class="line">  <span class="keyword">pass</span> <span class="comment">#pass用来占位,方便搭建框架补代码</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;不满足条件输出我&#x27;</span>)</span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>elif 后面必须写上条件的语句</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#多个条件：</span></span><br><span class="line">score = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;成绩为:&#x27;</span>)) <span class="comment">#int()强制转化为整型数据</span></span><br><span class="line"><span class="keyword">if</span> score &gt;=<span class="number">60</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;呵呵&#x27;</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">elif</span> score &lt;=<span class="number">20</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;??&#x27;</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">elif</span> score &gt;=<span class="number">90</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;牛逼&#x27;</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>if…elif练习:与电脑石头剪刀布</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 0:石头 1:剪刀 2:布</span></span><br><span class="line"><span class="keyword">import</span> random <span class="comment">#引入随机数</span></span><br><span class="line">person = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请出拳:&#x27;</span>))</span><br><span class="line">computer = random.randint(<span class="number">0</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;电脑出拳:&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(computer))</span><br><span class="line"><span class="keyword">if</span> person &gt;<span class="number">2</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;输入错误&#x27;</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">if</span> person == <span class="number">0</span> <span class="keyword">and</span> computer == <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;你赢了，真棒！&#x27;</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">elif</span> person == <span class="number">1</span> <span class="keyword">and</span> computer == <span class="number">2</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;你赢了，真棒！&#x27;</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">elif</span> person == <span class="number">2</span> <span class="keyword">and</span> computer == <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;你赢了，真棒！&#x27;</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">elif</span> person == computer:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;平手！&#x27;</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;您输了!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>练习：if-else 的嵌套使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">xf = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入您的学分:&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> xf &gt;<span class="number">10</span>:</span><br><span class="line">    grade = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入你的成绩&#x27;</span>))</span><br><span class="line">    <span class="keyword">if</span> grade &gt;= <span class="number">80</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;good~恭喜您,可以升学&#x27;</span>)</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;很遗憾，您的成绩不达标&#x27;</span>)</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;回去修理地球吧！&#x27;</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>eles 是选配 ，根据实际的情况来填写</p>
+</li>
+</ul>
+</li>
+<li><p>循环流程</p>
+<ul>
+<li><p>语法特点:</p>
+<p>1.有初始值</p>
+<p>2.条件表达式</p>
+<p>3.变量的自增自减，否则会造成死循环</p>
+</li>
+<li><p>使用条件:循环的次数不确定，是依靠循环条件来结束</p>
+</li>
+<li><p>目的:为了将相似或者相同的代码操作变得更加简洁，使得代码可以重复利用</p>
+</li>
+<li><p>while   语法结构</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输出1-100之间的数据</span></span><br><span class="line">index = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> index &lt;= <span class="number">100</span></span><br><span class="line">	<span class="built_in">print</span>(index)</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>练习：与电脑猜拳</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 0:石头 1:剪刀 2:布</span></span><br><span class="line"><span class="keyword">import</span> random <span class="comment">#引入随机数</span></span><br><span class="line">num = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> num &lt;= <span class="number">10</span> :</span><br><span class="line">    person = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请出拳:&#x27;</span>))</span><br><span class="line">    computer = random.randint(<span class="number">0</span>,<span class="number">2</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;电脑出拳:&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(computer))</span><br><span class="line">    <span class="keyword">if</span> person &gt;<span class="number">2</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;输入错误&#x27;</span>)</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">if</span> person == <span class="number">0</span> <span class="keyword">and</span> computer == <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;你赢了，真棒！&#x27;</span>)</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">elif</span> person == <span class="number">1</span> <span class="keyword">and</span> computer == <span class="number">2</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;你赢了，真棒！&#x27;</span>)</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">elif</span> person == <span class="number">2</span> <span class="keyword">and</span> computer == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;你赢了，真棒！&#x27;</span>)</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">elif</span> person == computer:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;平手！&#x27;</span>)</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;您输了!&#x27;</span>)</span><br><span class="line">    num += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>练习:打印等腰三角形</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 等腰三角形</span></span><br><span class="line">row = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> row &lt;= <span class="number">5</span>:</span><br><span class="line">    j=<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> j &lt;= <span class="number">5</span>-row: <span class="comment">#控制打印空格的数量</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>,end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        j+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    k=<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> k &lt;= <span class="number">2</span>*row-<span class="number">1</span>: <span class="comment">#控制打印 *号数量</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span>,end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        k+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line">    row += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>练习:打印直角三角形</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">row = <span class="number">1</span> </span><br><span class="line"><span class="keyword">while</span> row &lt;=<span class="number">7</span>:</span><br><span class="line">    j = <span class="number">1</span> <span class="comment">#在每一行上面打印多少个字符的数量</span></span><br><span class="line">    <span class="keyword">while</span> j &lt;= row:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span>,end = <span class="string">&#x27; &#x27;</span>)</span><br><span class="line">        j += <span class="number">1</span> </span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line">    row+=<span class="number">1</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>练习：while… 99乘法表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> i &lt;= <span class="number">9</span>:</span><br><span class="line">    j = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> j &lt;= i:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;%d*%d=%d&#x27;</span>%(i,j,i*j),end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">        j += <span class="number">1</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>for循环</p>
+<p>语法特点:遍历操作，依次的取集合容器中的每个值</p>
+<p>for…in…</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tags=<span class="string">&#x27;我是帅哥&#x27;</span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> tags:</span><br><span class="line">    <span class="built_in">print</span>(item)</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+
+<p>range 此函数可以生成一个数据集合列表</p>
+<p>range(起始:结束:步长) 步长不能为0</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#求偶数</span></span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">101</span>): <span class="comment">#打印1-100，由于左边包含右边不包含，所以1，101</span></span><br><span class="line">  <span class="keyword">if</span> num %<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;%d是偶数&#x27;</span>%num)</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>break、continue语句</p>
+<p>break 有中断，结束之意，满足条件就会直接结束本层循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> data <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50</span>,<span class="number">201</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">sum</span> &gt; <span class="number">100</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;循环执行到%d就退出:&#x27;</span>%data)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="built_in">sum</span> += data</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;sum=%d&#x27;</span>%<span class="built_in">sum</span>)</span><br></pre></td></tr></table></figure>
+
+<p>continue:结束本次循环，继续的进行下次循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#求奇数</span></span><br><span class="line"><span class="keyword">for</span> data <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50</span>,<span class="number">101</span>):</span><br><span class="line">    <span class="keyword">if</span> data %<span class="number">2</span> == <span class="number">0</span> :</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="built_in">print</span>(data)</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>练习：for循环99乘法表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i+<span class="number">1</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;%d*%d=%d&#x27;</span>%(i,j,i*j),end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="built_in">print</span>() <span class="comment">#控制换行</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>for…else</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ac=<span class="string">&#x27;caa&#x27;</span></span><br><span class="line">pwd=<span class="string">&#x27;123&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">    zh = <span class="built_in">input</span>(<span class="string">&#x27;请输入账号:&#x27;</span>)</span><br><span class="line">    pw = <span class="built_in">input</span>(<span class="string">&#x27;请输入密码:&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> ac == zh <span class="keyword">and</span> pwd ==  pw:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;登录成功!&#x27;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;错误多次，账户已锁定！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>while…else</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">index = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> index &lt;=<span class="number">10</span>:</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>: </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -285,11 +379,22 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/04/08/python/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/04/09/Python/">展开全文 >></a>
         </p>
       
 
@@ -813,6 +918,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
             
             <div class="clearfix"></div>
